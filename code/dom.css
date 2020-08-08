@@ -1,0 +1,17 @@
+*,*::before,*::after{-webkit-box-sizing:border-box;box-sizing:border-box}
+a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,hr,i,iframe,img,ins,input,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,textarea,tfoot,th,thead,time,tr,ul,var,video{-webkit-tap-highlight-color:transparent;border:0;font-family:-apple-system,BlinkMacSystemFont,'Roboto',sans-serif;margin:0;outline:0;padding:0}
+html,body{-ms-text-size-adjust:100%;-moz-osx-font-smoothing:grayscale;-moz-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;box-sizing:border-box;display:block;font-family:-apple-system,BlinkMacSystemFont,'Roboto',sans-serif;font-size:16px;font-weight:400;margin:0;padding:0;text-size-adjust:100%}
+div,article,aside,details,figcaption,figure,footer,header,main,nav,section,summary,hgroup{display:block}
+head,script,link,meta,title,style,[hidden],.hide{display:none}
+html,body{background:#ffffff}
+.code-type{align-items:center;background:#f1f1f1;display:flex;flex-wrap:wrap;height:48px;justify-content:flex-start;padding:0 16px;white-space:normal}
+label{color:#696969;font-family:monospace;font-size:16px;font-weight:400;line-height:1.4;user-select:none}
+select{align-items:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;background:0;border:0;border-radius:4px;color:#000000;cursor:pointer;display:inline-flex;font-family:monospace;font-size:16px;font-weight:400;line-height:1.4;max-width:200px;outline:0;padding:0;position:relative;text-decoration:underline;text-transform:uppercase;user-select:none;width:100%}
+select::-ms-expand{display:none}
+option{background:#ffffff;border:0;color:#000000;display:block;font-weight:400;white-space:pre}
+.code-main{align-content:baseline;display:grid;grid-row-gap:16px;grid-template-areas:'input' 'result';max-height:calc(100vh - 48px);padding:16px}
+textarea{background:#eaeaea;border:1px solid #c1c1c1;border-radius:4px;box-shadow:0 2px 8px 1px #cecece;color:#333333;font-family:monospace;font-size:14px;font-weight:400;height:calc(50vh - 48px);line-height:1.4;padding:16px;resize:none}
+textarea::-webkit-input-placeholder{color:#888888;font-family:monospace;font-size:14px;font-weight:400;line-height:1.4}
+.code-input{grid-area:input}
+.code-result{grid-area:result}
+.code-js,[data-code='js']{display:none}
