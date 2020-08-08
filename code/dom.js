@@ -49,7 +49,7 @@ function code() {
         b.innerHTML = a;
         rsp.highlightBlock(b);
         d.innerHTML = b.innerHTML;
-        document.queryCommandSupported("copy") && document.execCommand("copy") && (navigator.clipboard.writeText(d.innerHTML), d.select());
+        d.select()
     });
     e.addEventListener("change", function (a) {
         b.setAttribute("class", "language-" + a.target.value);
