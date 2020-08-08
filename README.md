@@ -1,1 +1,2 @@
-# rizkysaskiaputra.github.io
+# Rizky Saskia Putra
+- [code](https://rizkysaskiaputra.github.io/code/)
