@@ -1,6 +1,18 @@
-gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
-plugins:
-  - jekyll-seo-tag
+# Site settings
 title: Rizky Saskia Putra
-webmaster_verifications:
-  google: xYKteXWFFpnt9Sdqy_0ZtiyhFtafYSNNQr5xfHgN59o
+subtitle: "This is cdn"
+copyright_name: Rizky Saskia Putra
+description: "This is blog."
+url: "https://rizkysaskiaputra.github.io"
+author: Rizky Saskia Putra
+github_username:  rizkysaskiaputra
+email_username:  fromdeveloper@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
