@@ -1,3 +1,6 @@
 gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
 plugins:
   - jekyll-seo-tag
+title: Rizky Saskia Putra
+webmaster_verifications:
+  google: xYKteXWFFpnt9Sdqy_0ZtiyhFtafYSNNQr5xfHgN59o
