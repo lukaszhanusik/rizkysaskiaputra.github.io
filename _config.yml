@@ -11,8 +11,6 @@ email_username:  fromdeveloper@gmail.com
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:title/
 paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
