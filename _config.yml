@@ -1,1 +1,3 @@
 gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
+plugins:
+  - jekyll-seo-tag
