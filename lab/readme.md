@@ -3,3 +3,5 @@
 - [Type a URL](https://rizkysaskiaputra.github.io/lab/type-a-url) - Test link.
 ### What If
 - `document.referrer` in `document.href` ([try](https://rizkysaskiaputra.github.io/lab/referrer-in-href))
+
+&#169;[rizkysaskiaputra](https://rizkysaskiaputra.blogspot.com/)
