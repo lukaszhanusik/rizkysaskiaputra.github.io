@@ -11,7 +11,12 @@ google_site_verification: xYKteXWFFpnt9Sdqy_0ZtiyhFtafYSNNQr5xfHgN59o
 markdown: kramdown
 highlighter: rouge
 paginate: 5
-exclude:
-    - anchorjs
+
+kramdown:
+  # Enable GitHub Flavored Markdown (fenced code blocks)
+  input: GFM
+  # Disable auto-generated ID's for headings
+  auto_ids: false
+
 
 gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
