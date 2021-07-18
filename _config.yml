@@ -9,6 +9,7 @@ google_site_verification: xYKteXWFFpnt9Sdqy_0ZtiyhFtafYSNNQr5xfHgN59o
 
 # Build settings
 markdown: kramdown
+auto_ids: false
 highlighter: rouge
 paginate: 5
 
