@@ -11,6 +11,7 @@ google_site_verification: xYKteXWFFpnt9Sdqy_0ZtiyhFtafYSNNQr5xfHgN59o
 markdown: kramdown
 highlighter: rouge
 paginate: 5
-theme: false
+exclude:
+    - assets/javascript/anchor-js
 
 gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
