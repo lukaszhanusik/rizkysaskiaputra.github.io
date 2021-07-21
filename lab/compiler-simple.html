@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="google-site-verification" content="xYKteXWFFpnt9Sdqy_0ZtiyhFtafYSNNQr5xfHgN59o"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<!-- SEO -->
+<title>Closure Compiler Service - Simple</title>
+<meta name="description" content="The Closure Compiler is a tool for making JavaScript download and run faster.">
+<link rel="canonical" href="https://rizkysaskiaputra.github.io/lab/compiler-simple.html">
+<meta property="og:title" content="Closure Compiler Service - Simple">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rizkysaskiaputra.github.io/lab/compiler-simple.html">
+<meta property="og:description" content="The Closure Compiler is a tool for making JavaScript download and run faster.">
+<!-- SEO -->
+</head>
+<body>
+    <form action="https://closure-compiler.appspot.com/compile" method="POST">
+    <p>Type JavaScript code to optimize here:</p>
+    <textarea name="js_code" cols="50" rows="5">
+    function hello(name) {
+      // Greets the user
+      alert('Hello, ' + name);
+    }
+    hello('New user');
+    </textarea>
+    <input type="hidden" name="compilation_level" value="SIMPLE_OPTIMIZATIONS">
+    <input type="hidden" name="output_format" value="text">
+    <input type="hidden" name="output_info" value="compiled_code">
+    <br><br>
+    <input type="submit" value="Optimize">
+    </form>
+</body>
+</html>
