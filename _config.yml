@@ -12,8 +12,6 @@ markdown: kramdown
 highlighter: rouge
 paginate: 5
 
-theme:             null # needed in gh-pages (https://github.com/jekyll/jekyll/issues/7478)
-
 kramdown:
   input: GFM
 
