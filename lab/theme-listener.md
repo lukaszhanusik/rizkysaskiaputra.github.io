@@ -55,4 +55,4 @@ html:
 <meta name="theme-color" content="#000">
 ```
 
-Download <a href="https://rizkysaskiaputra.github.io/lib/theme-listener.js" download="theme-listener.js">theme-listener.js</a>
+Download <a href="https://rizkysaskiaputra.github.io/lib/theme-listener.js" target="_blank">theme-listener.js</a>
