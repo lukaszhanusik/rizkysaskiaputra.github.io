@@ -1,4 +1,4 @@
-## Let's try build another things
+## Lab
 - <a href="https://rizkysaskiaputra.github.io/lab/color" target="_self">Color</a> - Change your way of color customization, available on all devices.
 - <a href="https://rizkysaskiaputra.github.io/lab/type-a-url" target="_self">Type a URL</a> - Test link.
 
