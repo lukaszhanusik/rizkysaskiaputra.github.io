@@ -5,6 +5,9 @@
 ### What If
 - `document.referrer` in `document.href` / <a href="https://rizkysaskiaputra.github.io/lab/referrer-in-href" target="_self">try referrer</a>.
 
+### CSS
+- <a href="https://rizkysaskiaputra.github.io/lab/content-visibility" target="_self">content-visibility</a> - the new CSS property that boosts your rendering performance. Improve initial load time by skipping the rendering of offscreen content. source [web.dev](https://web.dev/content-visibility/)
+
 ### Javascript
 - [Inject CSS Style](https://rizkysaskiaputra.github.io/lab/style-inject) into `<head>`.
 - [Theme Listener](https://rizkysaskiaputra.github.io/lab/theme-listener) this way you can switch themes automatically.
