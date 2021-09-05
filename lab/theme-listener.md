@@ -1,58 +1,83 @@
 ## Theme Listener
-By default the theme is set to light mode, will be changed to dark when the user changes the theme color, this way you can switch themes automatically.
 
-You must have this meta attribute:
-```
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#fff">
-```
-Then put this listener after meta.
-```
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#fff">
-<script>
-  // listener here
-</script>
-```
-**NOTE**: don't use this method
-```
-<script src="../lib/theme-listener.js"></script>
+``` html
+<meta id="theme-scheme-system" name="color-scheme" content="dark light"/>
+<meta id="theme-light-system" name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"/>
+<meta id="theme-dark-system" name="theme-color" media="(prefers-color-scheme: dark)" content="#000000"/>
 ```
 
-### theme.light
-css:
-```
-html:not([color-scheme]),[color-scheme="light"]{
-  color-scheme: light;
-  // your css variable here
-}
-```
-js:
-```
-theme.setAttribute("content","#fff");
-```
-html:
-```
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#fff">
+``` js
+(function(window,document,undefined){
+  var theme = window.localStorage.getItem("theme"),
+      system = window.localStorage.getItem("system-theme");
+  function dark(){
+    document.documentElement.style.setProperty("color-scheme","dark");
+    document.documentElement.classList.add("dark")
+  };
+  function light(){
+    document.documentElement.style.setProperty("color-scheme","light");
+    document.documentElement.classList.contains("dark") && document.documentElement.classList.remove("dark")
+  };
+  function initTheme(scheme){
+    switch(scheme){
+      case "dark": dark(); break;
+      case "light": light(); break;
+      default: light()
+    }
+  };
+  function addMeta(scheme){
+    var metaTheme = document.createElement("meta"),
+        metaScheme = document.createElement("meta");
+    metaTheme.id = "theme-color-custom";
+    metaTheme.name = "theme-color";
+    metaScheme.id = "theme-scheme-custom";
+    metaScheme.name = "color-scheme";
+    function metaDark(){
+      metaTheme.content = "#000000";
+      metaScheme.content = "dark";
+    };
+    function metaLight(){
+      metaTheme.content = "#ffffff";
+      metaScheme.content = "light";
+    };
+    switch(scheme){
+      case "dark": metaDark(); break;
+      case "light": metaLight(); break;
+      default: metaLight()
+    };
+    document.head.insertAdjacentElement("afterbegin",metaTheme);
+    document.head.insertAdjacentElement("afterbegin",metaScheme);
+  }
+  function removeMeta(){
+    var dark = document.getElementById("theme-dark-system"),
+        light = document.getElementById("theme-light-system"),
+        scheme = document.getElementById("theme-scheme-system");
+    if(dark && light && scheme){
+      dark.remove();
+      light.remove();
+      scheme.remove();
+    }
+  };
+  function removeSystem(){
+    window.localStorage.removeItem("system-theme")
+  };
+  if(!theme && system){
+    initTheme(system);
+  }
+  else if(theme && !system){
+    initTheme(theme);
+    removeMeta();
+    addMeta(theme);
+  }
+  else if(theme && system){
+    initTheme(theme);
+    removeSystem();
+    removeMeta();
+    addMeta(theme);
+  }
+  else{return false}
+})(window,document);
+
 ```
 
-### theme.dark
-css:
-```
-[color-scheme="dark"]{
-  color-scheme: dark;
-  // your css variable here
-}
-```
-js:
-```
-theme.setAttribute("content","#000");
-```
-html:
-```
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#000">
-```
-
-Download <a href="https://rizkysaskiaputra.github.io/lib/theme-listener.js" target="_blank">theme-listener.js</a>
+Download (archive) <a href="https://rizkysaskiaputra.github.io/lib/theme-listener.js" target="_blank">theme-listener.js</a>
