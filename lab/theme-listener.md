@@ -1,11 +1,13 @@
 ## Theme Listener
 
+### Meta scheme
 ``` html
 <meta id="theme-scheme-system" name="color-scheme" content="dark light"/>
 <meta id="theme-light-system" name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"/>
 <meta id="theme-dark-system" name="theme-color" media="(prefers-color-scheme: dark)" content="#000000"/>
 ```
 
+### Baseline
 ``` js
 (function(window,document,undefined){
   var theme = window.localStorage.getItem("theme"),
@@ -78,6 +80,50 @@
   else{return false}
 })(window,document);
 
+```
+
+### Without Meta
+``` js
+(function(r,s,p){
+  r.themeListen = function(){
+    var t = r.localStorage.getItem("theme"),
+        y = r.localStorage.getItem("system-theme");
+    function d(){
+      s.documentElement.style.setProperty("color-scheme","dark");
+      s.documentElement.classList.add("dark")
+    };
+    function l(){
+      s.documentElement.style.setProperty("color-scheme","light");
+      s.documentElement.classList.contains("dark") && s.documentElement.classList.remove("dark")
+    };
+    function i(c){
+      switch(c){
+        case "dark": d(); break;
+        case "light": l(); break;
+        default: return!1
+      }
+    };
+    function o(){
+      r.localStorage.removeItem("system-theme")
+    };
+    if(!t && y){
+      i(y);
+    }
+    else if(t && !y){
+      i(t);
+    }
+    else if(t && y){
+      i(t);
+      o();
+    }
+    else{return!1};
+    r.themeListen = p;
+  };
+  return r.themeListen()
+})(window,document);
+```
+``` js
+(function(r,s,p){r.themeListen=function(){var t=r.localStorage.getItem("theme"),y=r.localStorage.getItem("system-theme");function d(){s.documentElement.style.setProperty("color-scheme","dark");s.documentElement.classList.add("dark")}function l(){s.documentElement.style.setProperty("color-scheme","light");s.documentElement.classList.contains("dark")&&s.documentElement.classList.remove("dark")}function i(c){switch(c){case "dark":d();break;case "light":l();break;default:return!1}}function o(){r.localStorage.removeItem("system-theme")}if(!t&&y)i(y);else if(t&&!y)i(t);else if(t&&y){i(t);o()}else return!1;r.themeListen=p};return r.themeListen()})(window,document);
 ```
 
 Download (archive) <a href="https://rizkysaskiaputra.github.io/lib/theme-listener.js" target="_blank">theme-listener.js</a>
